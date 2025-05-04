@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html ng-app="siifca" lang="es_mx">
+
+<!-- Mirrored from fca.uas.edu.mx/siiFCA/admininten/inicio by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 03:40:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>siiFCA</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0"><title>siiFCA</title>
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate"> <!-- <base href="/"> -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../css/lumx.css">
+    <link rel="stylesheet" href="../css/lumxapp.css">
+    <link rel="stylesheet" href="../../../fonts.googleapis.com/cssd767.css?family=Roboto:300,400,500,700"> 
+    <link rel="stylesheet" href="../css/materialdesignicons.min.css" >
+    <link rel="shortcut icon" type="image/png" href="../favicon.ico">
+
+</head>
+
+<body ng-class="{ 'home': $state.current.name === 'app.home' }">
+    <div class="header" ui-view="header"></div>
+
+    <div class="app">
+        <div class="app__wrapper">
+            <div ui-view="dialog"></div>
+            <div class="app__sidebar" ui-view="sidebar"></div>
+            <div class="app__main" ui-view="main"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>Elaborado por</span>
+
+        <a href="../../index.html" class="footer__link" target="_blank">
+            <img src="../images/logo/ccfca.gif" alt="Centro de Cómputo FCA::UAS">
+        </a>
+    </div>
+
+    <div class="palm-nav-filter" ng-class="{ 'palm-nav-filter--is-open': LayoutService.palmNavIsOpen }" ng-click="LayoutService.togglePalmNav()"></div>
+
+    <div class="palm-nav" ng-class="{ 'palm-nav--is-open': LayoutService.palmNavIsOpen }">
+        <a ui-sref="app.home" class="palm-nav__logo">
+            <img src="../images/logo/siifca.png">
+        </a>
+
+        <div class="palm-nav__main-nav">
+            <lx-main-nav lx-context="palm-nav"></lx-main-nav>
+        </div>
+    </div>
+    
+     <!-- Libs -->
+     <script src="../libs/jquery.min.js"></script>
+     <script src="../libs/jquery.inputmask.bundle.min.js"></script>
+     <script src="../libs/velocity.min.js"></script>
+     <script src="../libs/moment-with-locales.min.js"></script>
+     <script src="../libs/jquery.inputmask.bundle.min.js"></script>
+ 
+     <!-- Angular -->
+     <script src="../libs/angular.min.js"></script>
+     <script src="../libs/angular-ui-router.min.js"></script>
+     <script src="../libs/angular-cookies.min.js"></script>
+     
+     <!-- LumX -->
+     <script src="../js/lumx.min.js"></script>
+ 
+     <!-- Google reCaptcha -->
+     <script src="../../../www.google.com/recaptcha/api56a9.js?render=6LeGaoYqAAAAAGnc5rah3Q0XKODifVTfulTehozu&amp;hl=es-419" async defer></script>
+
+     <!-- Apps -->
+     <script src="../js/app.js"></script>
+     <script src="../js/demo/layout/js/layout_service.js"></script>
+     <script src="../js/demo/session/js/session.service.js"></script>
+     <script src="../js/demo/main-nav/js/main-nav_directive.js"></script>
+     <script src="../js/demo/main-nav/js/main-nav-link_directive.js"></script>
+     <script src="../js/demo/component/js/component_directive.js"></script>
+     <script src="../js/demo/input/js/input.directive.js"></script>
+     <script src="../includes/alumnos/js/alumnos.controller.js"></script>
+     <script src="../includes/alumnos/js/alumnos-eventos.controller.js"></script>
+     <script src="../includes/alumnos/js/alumnos-avisos.controller.js"></script>
+     <script src="../includes/alumnos/js/alumnos-expediente.controller.js"></script>
+     <script src="../includes/alumnos/js/alumnos-encuestas.controller.js"></script>
+     <script src="../includes/alumnos/js/alumnos-creditos.controller.js"></script>
+     <script src="../includes/alumnos/js/alumnos-constancias.controller.js"></script>
+     <script src="../includes/docentes/js/docentes.controller.js"></script>
+     <script src="../includes/docentes/js/docentes-avisos.controller.js"></script>
+     <script src="../includes/docentes/js/docentes-eventos.controller.js"></script>
+     <script src="../includes/docentes/js/docentes-expediente.controller.js"></script>
+     <script src="../includes/docentes/js/docentes-constancias.controller.js"></script>
+     <script src="../includes/admininten/js/admininten.controller.js"></script>
+     <script src="../includes/admininten/js/admininten-avisos.controller.js"></script>
+     <script src="../includes/admininten/js/admininten-eventos.controller.js"></script>
+     <script src="../includes/admininten/js/admininten-expediente.controller.js"></script>
+     <script src="../includes/admininten/js/admininten-constancias.controller.js"></script>
+     <script src="../includes/suad/js/suad-recibos.controller.js"></script>
+     <script src="../includes/suad/js/suad-cargos.controller.js"></script>
+     <script src="../includes/suad/js/suad-abonos.controller.js"></script>
+     <script src="../includes/admin/js/admin.controller.js"></script>
+     <script src="../includes/admin/js/admin-recibos.controller.js"></script>
+     <script src="../includes/admin/js/admin-eventos.controller.js"></script>
+     <script src="../includes/admin/js/admin-expedientes.controller.js"></script>
+     <script src="../includes/admin/js/admin-constancias.controller.js"></script>
+     <script src="../includes/admin/js/admin-creditos.controller.js"></script>
+     <script src="../includes/admin/js/admin-creditosalumno.controller.js"></script>
+    
+</body>
+
+<!-- Mirrored from fca.uas.edu.mx/siiFCA/admininten/inicio by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 May 2025 03:40:14 GMT -->
+</html>
